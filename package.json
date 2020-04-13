@@ -1,5 +1,5 @@
 {
-  "name": "Journal",
+  "name": "journal",
   "version": "1.0.0",
   "description": "A journaling website for users to title and write entries.",
   "main": "index.js",
