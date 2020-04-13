@@ -10,11 +10,3 @@ export function vowels(bodyText) {
   }
   return vowelCount;
 }
-
-//   bodyText.forEach(function(letter) {
-//     if (vowelsArray.includes(letter)) {
-//       vowelCount += 1;
-//     }
-//   });
-//   return vowelCount;
-// }
