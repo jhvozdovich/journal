@@ -18,10 +18,11 @@ $(document).ready(function() {
   $("#journal-form").submit(function(event) {
     event.preventDefault();
     var title = $("#title").val();
+    console.log(title);
     var bodyText = $("#body").val();
     var vowelCount = vowels(bodyText);
     var consonantCount = consonants(bodyText);
-    var teaserText = teaser(bodyText)
+    var teaserText = teaser(bodyText);
     
     journal(title, bodyText, vowelCount, consonantCount, teaserText);
   });
