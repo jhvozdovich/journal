@@ -6,9 +6,9 @@ import { consonants } from "./consonants.js";
 // import { teaser } from "./teaser.js";
 import "./styles.css";
 
-function journal(title, body, vowelCount, consonantCount) {
+function journal(title, bodyText, vowelCount, consonantCount) {
   $(".entries").append("<h3>" + title + "</h3>");
-  $(".entries").append("<p>" + body + "</p>");
+  $(".entries").append("<p>" + bodyText + "</p>");
   $(".entries").append("<p> Number of Vowels: " + vowelCount + "</p>");
   $(".entries").append("<p> Number of Consonants: " + consonantCount + "</p>");
 }
@@ -17,10 +17,10 @@ $(document).ready(function() {
   $("#journal-form").submit(function(event) {
     event.preventDefault();
     var title = $("#title").val();
-    var body = $("#body").val();
-    var vowelCount = vowels(body);
-    var consonantCount = consonants(body);
+    var bodyText = $("#body").val();
+    var vowelCount = vowels(bodyText);
+    var consonantCount = consonants(bodyText);
     
-    journal(title, body, vowelCount, consonantCount);
+    journal(title, bodyText, vowelCount, consonantCount);
   });
 });

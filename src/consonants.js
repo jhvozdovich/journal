@@ -1,12 +1,12 @@
 // Backend Buisness Logic
-export function consonant(body) {
+export function consonant(bodyText) {
   var consonantCount = 0;
-  var consonantArray = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+  var vowelsArray = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
 
-  body.forEach(function(letter) {
-    if (consonantArray.includes(letter)) {
+  for (var i=0; i < bodyText.length; i++) {
+    if (!vowelsArray.includes(bodyText[i])) {
       consonantCount += 1;
     }
-  });
+  }
   return consonantCount;
 }
