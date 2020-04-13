@@ -6,7 +6,7 @@ import { consonants } from "./consonants.js";
 // import { teaser } from "./teaser.js";
 import "./styles.css";
 
-function journal(title, body, vowelCount) {
+function journal(title, body, vowelCount, consonantCount) {
   $(".entries").append("<h3>" + title + "</h3>");
   $(".entries").append("<p>" + body + "</p>");
   $(".entries").append("<p> Number of Vowels: " + vowelCount + "</p>");
@@ -21,6 +21,6 @@ $(document).ready(function() {
     var vowelCount = vowels(body);
     var consonantCount = consonants(body);
     
-    journal(title, body, vowelCount);
+    journal(title, body, vowelCount, consonantCount);
   });
 });
